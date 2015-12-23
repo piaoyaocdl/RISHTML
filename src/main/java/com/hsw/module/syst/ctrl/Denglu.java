@@ -10,7 +10,7 @@ public class Denglu
 	@RequestMapping("/")
 	public ModelAndView denglu()
 	{
-		ModelAndView re = new ModelAndView("syst/denglu.jap");
+		ModelAndView re = new ModelAndView("syst/denglu.jsp");
 		return re;
 	}
 }
