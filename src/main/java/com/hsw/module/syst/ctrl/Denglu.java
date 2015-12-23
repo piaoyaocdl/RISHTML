@@ -1,5 +1,6 @@
 package com.hsw.module.syst.ctrl;
 
+import org.aspectj.lang.annotation.AfterReturning;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,4 +14,5 @@ public class Denglu
 		ModelAndView re = new ModelAndView("syst/denglu.jsp");
 		return re;
 	}
+
 }
