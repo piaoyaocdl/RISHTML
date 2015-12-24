@@ -5,6 +5,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hsw.util.Gongju;
@@ -64,4 +65,17 @@ public class Denglu
 		}
 		return re;
 	}
+	
+	/**
+	 * 登出
+	 * @return
+	 */
+	@RequestMapping("/dengchu")
+	public ModelAndView dengchu()
+	{
+		SecurityUtils.getSubject().logout();
+		ModelAndView re=new ModelAndView("syst/denglu.jsp");
+		return  re;
+	}
+
 }
