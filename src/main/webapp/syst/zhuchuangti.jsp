@@ -56,7 +56,7 @@
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 									<li>
-										<a role="button" href="/zuzhipeixing/xinchuanghla/jianceshenqingdan">检测申请单</a>
+										<a role="button" target="jiazaiqi" href="zuzhipeixing/linchuanghla/jianceshenqingdan">检测申请单</a>
 									</li>
 									<li>
 										<a role="button">Another action</a>
@@ -75,8 +75,20 @@
 			</div>
 		</div>
 		<div class="col-md-10" id="加载器" style="padding-right: 40px;">
-			<iframe id="jiazaiqi" style="width: 100%;border-width: 0px;" > </iframe>
+			<iframe id="jiazaiqi" name="jiazaiqi" scrolling="no" style="width: 100%; border-width: 0px;"> </iframe>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function reinitIframe()
+		{
+			var iframe = document.getElementById("jiazaiqi");
+			try {
+				
+				iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;
+			} catch (ex) {
+			}
+		}
+		window.setInterval("reinitIframe()", 1000);
+	</script>
 </body>
 </html>
