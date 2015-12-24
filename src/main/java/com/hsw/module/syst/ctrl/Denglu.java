@@ -1,8 +1,15 @@
 package com.hsw.module.syst.ctrl;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.hsw.util.Gongju;
+
+
 
 @Controller
 public class Denglu
@@ -24,10 +31,26 @@ public class Denglu
 	 * @return 
 	 */
 	@RequestMapping("/dengluyanzheng")
-	public ModelAndView dengluyanzheng()
+	public ModelAndView denglu(String zhanghao, String mima, String jizhuwo)
 	{
-		ModelAndView re=new ModelAndView("syst/zhuchuangti.jsp");
+		UsernamePasswordToken token = new UsernamePasswordToken(zhanghao, Gongju.jiami_mima(mima));
+		Subject currentUser = SecurityUtils.getSubject();
+		ModelAndView re=new ModelAndView();
+		try
+		{
+			// 登陆
+			currentUser.login(token);
+			currentUser.getSession().setAttribute("yonghuming", zhanghao);
+			if ("on".equals(jizhuwo))
+			{
+				token.setRememberMe(true);
+			}
+			re.setViewName("syst/zhuchuangti.jsp");
+		} catch (Exception uae)
+		{
+			re.setViewName("syst/denglu.jsp");
+			re.addObject("cuowuxinxi", "帐号或者密码错误！");
+		}
 		return re;
 	}
-
 }

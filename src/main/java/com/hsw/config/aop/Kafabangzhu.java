@@ -46,7 +46,12 @@ public class Kafabangzhu
 		System.out.println("携带参数：");
 		for (String key : canshus.keySet())
 		{
-继续
+			System.out.print("        " + key + ":");
+			for ( String val : canshus.get(key))
+			{
+				System.out.print(val+",");
+			}
+			System.out.println("");
 		}
 		System.out.println("***************************************");
 	}
