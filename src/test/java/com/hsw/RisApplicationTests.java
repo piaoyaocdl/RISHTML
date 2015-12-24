@@ -9,10 +9,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = RisApplication.class)
 @WebAppConfiguration
-public class RisApplicationTests {
+public class RisApplicationTests
+{
 
 	@Test
-	public void contextLoads() {
+	public void contextLoads()
+	{
 	}
 
 }

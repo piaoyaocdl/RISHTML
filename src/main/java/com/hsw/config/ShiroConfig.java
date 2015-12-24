@@ -29,16 +29,16 @@ public class ShiroConfig
 	{
 		ShiroFilterFactoryBean re = new ShiroFilterFactoryBean();
 		Map<String, String> fcm = new HashMap<>();
-		
+
 		// 静态资源
 		fcm.put("/bootstrap-3.3.5/**", "anon");
 		fcm.put("/hswstyle/**", "anon");
 		fcm.put("/image/**", "anon");
-		
+
 		// 用户级别
 		fcm.put("/**", "user");
 		// 授权级别
-		
+
 		// 匿名级别
 		fcm.put("/dengluyanzheng", "anon");
 		re.setFilterChainDefinitionMap(fcm);

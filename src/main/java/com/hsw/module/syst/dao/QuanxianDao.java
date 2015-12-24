@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import com.hsw.module.syst.model.Quanxian;
 
-public interface QuanxianDao extends JpaSpecificationExecutor<QuanxianDao>,JpaRepository<Quanxian, Long>
+public interface QuanxianDao extends JpaSpecificationExecutor<QuanxianDao>, JpaRepository<Quanxian, Long>
 {
 
 }

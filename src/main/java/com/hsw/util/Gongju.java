@@ -8,7 +8,7 @@ public class Gongju
 	 * Spring MVC 的重定向
 	 */
 	public static final String 重定向 = "redirect:";
-	
+
 	/**
 	 * 密码加密函数
 	 * 

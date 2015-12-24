@@ -21,12 +21,12 @@ public class Juese
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	private String jueseming;
-	
+
 	@ManyToMany
 	private Set<Yonghu> yonghus;
-	
-	@ManyToMany(mappedBy="jueses")
+
+	@ManyToMany(mappedBy = "jueses")
 	private Set<Quanxian> quanxians;
 }

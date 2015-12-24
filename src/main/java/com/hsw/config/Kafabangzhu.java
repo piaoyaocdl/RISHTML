@@ -47,9 +47,9 @@ public class Kafabangzhu
 		for (String key : canshus.keySet())
 		{
 			System.out.print("        " + key + ":");
-			for ( String val : canshus.get(key))
+			for (String val : canshus.get(key))
 			{
-				System.out.print(val+",");
+				System.out.print(val + ",");
 			}
 			System.out.println("");
 		}

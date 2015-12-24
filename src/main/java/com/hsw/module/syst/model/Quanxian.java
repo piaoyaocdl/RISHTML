@@ -19,9 +19,9 @@ public class Quanxian
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	private String quanxianming;
-	
+
 	@ManyToMany
 	private Set<Juese> jueses;
 }

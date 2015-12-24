@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import com.hsw.module.syst.model.Juese;
 
-public interface JueseDao extends JpaRepository<Juese, Long>,JpaSpecificationExecutor<Juese>
+public interface JueseDao extends JpaRepository<Juese, Long>, JpaSpecificationExecutor<Juese>
 {
 
 }

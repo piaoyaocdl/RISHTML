@@ -9,14 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.hsw.util.Gongju;
 
-
-
 @Controller
 public class Denglu
 {
-	
+
 	/**
 	 * 到登录页面
+	 * 
 	 * @return
 	 */
 	@RequestMapping("/")
@@ -25,17 +24,18 @@ public class Denglu
 		ModelAndView re = new ModelAndView("syst/denglu.jsp");
 		return re;
 	}
-	
+
 	/**
 	 * 登录验证
-	 * @return 
+	 * 
+	 * @return
 	 */
 	@RequestMapping("/dengluyanzheng")
 	public ModelAndView denglu(String zhanghao, String mima, String jizhuwo)
 	{
 		UsernamePasswordToken token = new UsernamePasswordToken(zhanghao, Gongju.jiami_mima(mima));
 		Subject currentUser = SecurityUtils.getSubject();
-		ModelAndView re=new ModelAndView();
+		ModelAndView re = new ModelAndView();
 		try
 		{
 			// 登陆

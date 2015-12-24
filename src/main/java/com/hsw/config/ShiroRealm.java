@@ -92,7 +92,7 @@ public class ShiroRealm extends AuthorizingRealm
 		{
 			return null;
 		}
-		
+
 		List<Yonghu> account = yonghudao.findAll(new Specification<Yonghu>()
 		{
 
@@ -103,7 +103,7 @@ public class ShiroRealm extends AuthorizingRealm
 				return query.where(ls).getRestriction();
 			}
 		});
-		
+
 		if (account.size() != 1)
 		{
 			return null;

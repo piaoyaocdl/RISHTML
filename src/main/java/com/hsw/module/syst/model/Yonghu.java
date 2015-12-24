@@ -18,12 +18,12 @@ import lombok.Setter;
 public class Yonghu
 {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	private String zhanghao;
 	private String mima;
-	
-	@ManyToMany(mappedBy="yonghus")
+
+	@ManyToMany(mappedBy = "yonghus")
 	private Set<Juese> jueses;
 }
