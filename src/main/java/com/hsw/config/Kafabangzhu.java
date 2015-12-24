@@ -1,4 +1,4 @@
-package com.hsw.config.aop;
+package com.hsw.config;
 
 import java.util.Iterator;
 import java.util.Map;
