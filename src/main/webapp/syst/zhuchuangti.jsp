@@ -21,10 +21,11 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" >
-				<img alt="Brand"  >
+			<a class="navbar-brand">
+				<img src="/image/tubiaohsw.png" style="height: 30px;">
 			</a>
 		</div>
+		<a type="button"  class="pull-right btn btn-default navbar-btn">登出</a>
 	</div>
 	</nav>
 </body>

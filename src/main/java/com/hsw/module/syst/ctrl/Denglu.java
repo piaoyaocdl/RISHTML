@@ -23,6 +23,17 @@ public class Denglu
 	{
 		ModelAndView re = new ModelAndView("syst/denglu.jsp");
 		return re;
+	}	
+	
+	/**
+	 * 到主窗体
+	 * @return
+	 */
+	@RequestMapping("/daozhuchuangti")
+	public ModelAndView daozhuchuangti()
+	{
+		ModelAndView re = new ModelAndView("syst/zhuchuangti.jsp");
+		return re;
 	}
 
 	/**
@@ -45,7 +56,7 @@ public class Denglu
 			{
 				token.setRememberMe(true);
 			}
-			re.setViewName("syst/zhuchuangti.jsp");
+			re.setViewName(Gongju.重定向+ "/daozhuchuangti");
 		} catch (Exception uae)
 		{
 			re.setViewName("syst/denglu.jsp");
