@@ -25,15 +25,15 @@
 				<form action="/dengluyanzheng" method="post">
 					<div class="form-group">
 						<label for="exampleInputEmail1">帐号</label>
-						<input type="text" class="form-control" name="zhanghao" id="exampleInputEmail1">
+						<input type="text" value="ceshi" class="form-control" name="zhanghao" id="exampleInputEmail1">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">密码</label>
-						<input type="password" class="form-control" name="mima" id="exampleInputPassword1">
+						<input type="password" value="ceshi" class="form-control" name="mima" id="exampleInputPassword1">
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox" name="jizhuwo">
+							<input type="checkbox" checked="checked" name="jizhuwo">
 							记住我
 						</label>
 						<button type="submit" class="btn btn-default" style="margin-left: 40px; width: 100px;">登录</button>
