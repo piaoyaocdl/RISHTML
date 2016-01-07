@@ -12,6 +12,7 @@ import com.hsw.module.zuzhipeixing.linchuanghla.jianceshenqingdan.model.Jiancesh
 public interface JianceshenqingdanDao
 		extends JpaRepository<Jianceshenqingdan, Long>, JpaSpecificationExecutor<Jianceshenqingdan>
 {
-	@Query("select shenqingdan from (select ss from Jianceshenqingdan ss where ss.tianjiariqi < :riqi ) shenqingdan where shenqingdan.tianjiariqi=MAX(shenqingdan.tianjiariqi)")
+	//查找指定日期前的最大ID，用来设置基础ID
+	@Query("select shenqingdan from  zuzhipeixing_linchuanghla_jianceshenqingdan shenqingdan where  shenqingdan.id=(select  max(s.id) from  zuzhipeixing_linchuanghla_jianceshenqingdan s where s.tianjiariqi < :riqi )")
 	Jianceshenqingdan findMaxId(@Param("riqi") Date riqi);
 }

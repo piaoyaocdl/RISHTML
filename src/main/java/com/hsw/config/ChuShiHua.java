@@ -1,5 +1,6 @@
 package com.hsw.config;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -84,12 +85,9 @@ public class ChuShiHua implements ApplicationListener<ApplicationReadyEvent>
 			if (gengxinriqi.get(Calendar.YEAR) != dangqianriqi.get(Calendar.YEAR))
 			{
 				jichuid.setGengxinriqi(Calendar.getInstance().getTime());
-				System.err.println("11111111111111111111111111111111111111");
 				Calendar ls1 = Calendar.getInstance();
-				ls1.set(dangqianriqi.get(Calendar.YEAR), 1, 1, 0, 0, 0);
+				ls1.set(dangqianriqi.get(Calendar.YEAR), 0, 1, 0, 0, 0);
 				Jianceshenqingdan jianceshenqingdan = jianceshenqingdandao.findMaxId(ls1.getTime());
-
-				System.err.println("11111111111111111111111111111111111111");
 				if (jianceshenqingdan == null)
 				{
 					jichuid.setJichuid(0);
