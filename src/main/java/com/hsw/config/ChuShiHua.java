@@ -14,7 +14,7 @@ import com.hsw.module.syst.model.Yonghu;
 import com.hsw.util.Gongju;
 
 /**
- * @author HSW 实现数据库初始化
+ * @author HSW 工程初始化运行
  */
 @Component
 public class ChuShiHua implements ApplicationListener<ApplicationReadyEvent>
