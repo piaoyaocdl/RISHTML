@@ -4,121 +4,102 @@
 <%@ include file="/component/kuangjiakaishi.jsp"%>
 <!-- 主体开始 -->
 <div class="container-fluid">
+	<!-- 查询输入 开始-->
 	<div class="row">
-		<div class="col-xs-12">
-			<form class="form-inline">
-				<div class="form-group">
-					<input type="text" class="form-control" id="exampleInputName2" placeholder="申请单编号">
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" id="exampleInputEmail2" placeholder="患者姓名">
-				</div>
-				<button type="submit" class="btn btn-default pull-right">查询</button>
-			</form>
-		</div>
-	</div>
-	<div class="row" style="margin-top: 20px;">
-		<div class="col-xs-12 ">
-			<div style="overflow: auto; width: auto;">
-				<table class="table table-striped table-hover  table-condensed" style="width: 1300px; overflow: auto;">
-					<thead>
-						<tr>
-							<th style="width: 50px;">ID</th>
-							<th style="width: 100px;">申请单编号</th>
-							<th style="width: 100px;">患者姓名</th>
-							<th style="width: 60px;">性别</th>
-							<th style="width: 100px;">出生日期</th>
-							<th>操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-							<td>@mdo</td>
-							<td>
-								<a role="button" data-toggle="modal" data-target="#xinjiashenqingdan">增加</a>
-								<a role="button">修改</a>
-								<a role="button">删除</a>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-							<td>@mdo</td>
-							<td>
-								<a role="button" data-toggle="modal" data-target="#xinjiashenqingdan">增加</a>
-								<a role="button">修改</a>
-								<a role="button">删除</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+		<form class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="申请单编号">
 			</div>
-		</div>
+			<div class="form-group">
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="患者姓名">
+			</div>
+			<button type="submit" class="btn btn-default pull-right">查询</button>
+		</form>
 	</div>
+	<!-- 查询输入 结束-->
+	<!-- 分页 开始 -->
+	<div class="row">
+		<nav class="pull-right">
+			<ul class="pagination">
+				<li>
+					<a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">前页</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">后页</a>
+				</li>
+				<li>
+					<a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- 分页 结束-->
+	<!-- 申请单表格 开始 -->
+	<div class="row">
+		<a class="btn btn-default" href="/zuzhipeixing/linchuanghla/daotianjiayemian" role="button">添加申请单</a>
+	</div>
+	<div class="row" style="margin-top: 5px;">
+		<table class="table table-striped table-bordered table-hover table-condensed">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>
+						<div class="btn-group">
+							<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								操作
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">修改</a>
+								</li>
+								<li>
+									<a href="#">删除</a>
+								</li>
+								<li>
+									<a href="#">详细信息</a>
+								</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 申请单表格 结束 -->
 </div>
-<!-- 新加申请单 弹出框  开始 -->
-<form class="form-horizontal"  action="/zuzhipeixing/linchuanghla/tianjiashenqingdan" method="post">
-	<div class="modal fade" id="xinjiashenqingdan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">新加申请单</h4>
-				</div>
-				<div class="modal-body">
-					<div class="form-group">
-						<label for="shenqingdanbianhao" class="col-sm-3 control-label">申请单编号</label>
-						<div class="col-sm-9">
-							<input type="text" name="shenqingdanbianhao" class="form-control" id="shenqingdanbianhao">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="huanzhexinging" class="col-sm-3 control-label">患者姓名</label>
-						<div class="col-sm-9">
-							<input type="text" name="huanzhexinging" class="form-control" id="huanzhexinging">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="xingbie" class="col-sm-3 control-label">性别</label>
-						<div class="col-sm-9">
-							<select class="form-control" name="xingbie" id="xingbie">
-								<option></option>
-								<option>男</option>
-								<option>女</option>
-								<option>未知</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="chushengriqi" class="col-sm-3 control-label">出生日期</label>
-						<div class="col-sm-9">
-							<input type="date" name="chushengriqi" class="form-control" id="chushengriqi">
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="submit" onclick="this.form.submit()" class="btn btn-default" data-dismiss="modal">添加</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</form>
-<!-- 新加申请单 弹出框  结束 -->
-<script type="text/javascript">
-	$(function() {
-		/* $(".form_datetime").datetimepicker({
-			format : 'yyyy-mm-dd hh:ii'
-		}); */
-	});
-</script>
 <!-- 主体结束 -->
 <%@ include file="/component/kuangjiajiesu.jsp"%>
 <%@ include file="/component/jieweipart.jsp"%>

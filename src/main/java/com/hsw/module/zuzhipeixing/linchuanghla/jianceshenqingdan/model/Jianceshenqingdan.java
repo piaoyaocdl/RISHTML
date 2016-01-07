@@ -2,6 +2,7 @@ package com.hsw.module.zuzhipeixing.linchuanghla.jianceshenqingdan.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +13,7 @@ import javax.persistence.TemporalType;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@Entity(name = "zuzhipeixing_linchuanghla_jianceshenqingdan")
 @Getter
 @Setter
 public class Jianceshenqingdan
@@ -21,19 +22,20 @@ public class Jianceshenqingdan
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	private String shenqingdanbianhao;
-	private String huanzhexinging;
+	@Column(unique = true)
+	private String bianhao;
+	private String yangbenleixing;
+	private String huanzhexingming;
 	private String xingbie;
 	@Temporal(TemporalType.DATE)
 	private Date chushengriqi;
-	
-	@Override
-	public String toString()
-	{
-		return "Jianceshenqingdan [id=" + id + ", shenqingdanbianhao=" + shenqingdanbianhao + ", huanzhexinging="
-				+ huanzhexinging + ", xingbie=" + xingbie + ", chushengriqi=" + chushengriqi + "]";
-	}
-	
-	
-
+	private String shenfenzhenghao;
+	private String shenqingyiyuan;
+	private String shenqingyisheng;
+	private String tongxundizhi;
+	private String youbian;
+	private String lianxidianhua;
+	private String beizhu;
+	@Temporal(TemporalType.DATE)
+	private Date tianjiariqi;
 }

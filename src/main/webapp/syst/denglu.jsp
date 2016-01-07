@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="/component/biaotipart.jsp"%>
 <!-- 这里开始窗体  -->
-<div class="container vertical-center" style="width: 300px;">
+<div class="container" id="denglukuang" style="width: 300px;">
 	<div class="panel panel-default">
 		<div class="panel-heading">重庆血液中心</div>
 		<div class="panel-body">
@@ -27,5 +27,12 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$(function() {
+		denglukuang = $("#denglukuang");
+		margintop = ($(window).height() - denglukuang.height()) / 2;
+		denglukuang.css("marginTop", margintop + "px");
+	});
+</script>
 <!-- 这里结束窗体  -->
 <%@ include file="/component/jieweipart.jsp"%>
