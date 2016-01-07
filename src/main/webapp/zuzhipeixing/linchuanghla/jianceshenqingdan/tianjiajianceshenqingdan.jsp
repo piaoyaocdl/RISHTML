@@ -4,7 +4,7 @@
 <%@ include file="/component/kuangjiakaishi.jsp"%>
 <!-- 主体开始 -->
 <div class="container-fluid">
-	<form action="/zuzhipeixing/linchuanghla/tianjiashenqingdan">
+	<form action="/zuzhipeixing/linchuanghla/tianjiashenqingdan" id="tianjianshenqingdan">
 		<div class="row">
 			<div class="col-md-2">
 				<div class="form-group">
@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-2">
 				<div class="form-group">
-					<label>患者姓名</label>
+					<label style="color: red;">患者姓名</label>
 					<input type="text" name="huanzhexingming" class="form-control">
 				</div>
 			</div>
@@ -98,10 +98,20 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6">
-				<button type="submit" class="btn btn-default">添加申请单</button>
+				<a class="btn btn-default" href="javascript:tianjiashenqingdan()" role="button">添加申请单</a>
 			</div>
 		</div>
 	</form>
+	<script type="text/javascript">
+		function tianjiashenqingdan()
+		{
+			if ($('input[name="huanzhexingming"]').val().trim().length == "0") {
+				alert("患者姓名不能为空！");
+				return;
+			}
+			$("#tianjianshenqingdan").submit();
+		}
+	</script>
 </div>
 <%@ include file="/component/kuangjiajiesu.jsp"%>
 <%@ include file="/component/jieweipart.jsp"%>

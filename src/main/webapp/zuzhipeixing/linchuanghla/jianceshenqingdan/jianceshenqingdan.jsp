@@ -52,7 +52,7 @@
 		<table class="table table-striped table-bordered table-hover table-condensed">
 			<thead>
 				<tr>
-					<th>#</th>
+					<th>编号</th>
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th></th>
@@ -83,18 +83,7 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-				</tr>
+				
 			</tbody>
 		</table>
 	</div>

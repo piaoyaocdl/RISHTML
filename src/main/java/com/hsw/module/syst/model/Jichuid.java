@@ -32,4 +32,5 @@ public class Jichuid
 	@Temporal(TemporalType.DATE)
 	private Date gengxinriqi;
 	private long jichuid;
+	private String cifenlei;
 }
