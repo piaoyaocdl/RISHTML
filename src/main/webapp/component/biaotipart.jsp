@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="/hswstyle/css/hsw.css">
 <script src="/bootstrap-3.3.5/js/jquery.min.js"></script>
 <script src="/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="/hswstyle/js/hsw.js"></script>
 <title>HSWRIS</title>
 </head>
 <body>

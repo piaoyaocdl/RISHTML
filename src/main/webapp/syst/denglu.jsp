@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="/component/biaotipart.jsp"%>
-
 <!-- 这里开始窗体  -->
-
 <div class="container vertical-center" style="width: 300px;">
 	<div class="panel panel-default">
 		<div class="panel-heading">重庆血液中心</div>
@@ -29,7 +27,5 @@
 		</div>
 	</div>
 </div>
-
 <!-- 这里结束窗体  -->
-
-<%@ include file="/component/jieweipart.jsp" %>
+<%@ include file="/component/jieweipart.jsp"%>
