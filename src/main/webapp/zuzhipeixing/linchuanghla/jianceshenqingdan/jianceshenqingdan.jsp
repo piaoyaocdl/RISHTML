@@ -48,21 +48,21 @@
 	<div class="row">
 		<a class="btn btn-default" href="/zuzhipeixing/linchuanghla/daotianjiayemian" role="button">添加申请单</a>
 	</div>
-	<div class="row" style="margin-top: 5px;">
-		<table class="table table-striped table-bordered table-hover table-condensed">
+	<div class="row" style="margin-top: 10px;">
+		<table class="table table-striped table-bordered table-hover table-condensed ">
 			<thead>
 				<tr>
-					<th>编号</th>
-					<th>First Name</th>
-					<th>Last Name</th>
 					<th></th>
+					<th>编号</th>
+					<th>患者姓名</th>
+					<th>性别</th>
+					<th>出生日期</th>
+					<th>申请医院</th>
+					<th>申请医生</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
+				<c:forEach var="shenqingdan" items="${shenqingdans}">
 					<td>
 						<div class="btn-group">
 							<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,19 +71,26 @@
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#">修改</a>
+									<a href="/zuzhipeixing/linchuanghla/daoxiugaishenqingdan?id=${shenqingdan.id }">修改</a>
 								</li>
 								<li>
-									<a href="#">删除</a>
+									<a href="/zuzhipeixing/linchuanghla/shenqingdanxiangxi?id=${shenqingdan.id }">详细信息</a>
 								</li>
 								<li>
-									<a href="#">详细信息</a>
+									<a href="/zuzhipeixing/linchuanghla/shanchushenqingdan?id=${shenqingdan.id }" style="color: red;">删除(清除一切信息)</a>
 								</li>
 							</ul>
 						</div>
 					</td>
-				</tr>
-				
+					<td scope="row">${shenqingdan.bianhao}</td>
+					<td>${shenqingdan.huanzhexingming}</td>
+					<td>${shenqingdan.xingbie}</td>
+					<td>
+						<fmt:formatDate value="${shenqingdan.chushengriqi}" pattern="yyyy-MM-dd" type="date" dateStyle="long" />
+					</td>
+					<td>${shenqingdan.shenqingyiyuan}</td>
+					<td>${shenqingdan.shenqingyisheng}</td>
+				</c:forEach>
 			</tbody>
 		</table>
 	</div>

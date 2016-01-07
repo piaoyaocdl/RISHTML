@@ -33,6 +33,27 @@ public class JianceshenqingdanCtrl
 		ModelAndView re = new ModelAndView("zuzhipeixing/linchuanghla/jianceshenqingdan/jianceshenqingdan.jsp");
 		return re;
 	}
+	/**
+	 * 修改申请单
+	 */
+	@RequestMapping("/xiugaishenqingdan")
+	public ModelAndView xiugaishenqingdan(Jianceshenqingdan xiugai)
+	{
+		//TODO 继续处理 修改申请单的逻辑
+		ModelAndView re = new ModelAndView("zuzhipeixing/linchuanghla/jianceshenqingdan/jianceshenqingdan.jsp");
+		return re;
+	}
+	/**
+	 * 到修改申请单页面
+	 */
+	@RequestMapping("/daoxiugaishenqingdan")
+	public ModelAndView daoxiugaishenqingdan(long id)
+	{
+		Jianceshenqingdan xiugai = jianceshenqingdanDao.findOne(id);
+		ModelAndView re = new ModelAndView("zuzhipeixing/linchuanghla/jianceshenqingdan/xiugaishenqingdan.jsp");
+		re.addObject("shenqingdan", xiugai);
+		return re;
+	}
 
 	/**
 	 * 到添加申请单页面
